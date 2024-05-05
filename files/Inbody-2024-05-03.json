@@ -1,0 +1,28 @@
+{
+    "measurements": [
+        {
+            "time": {
+                "date": "2024-05-03",
+                "hour": "11:03:00"
+            },
+            "patient": {
+                "id": "290224-1",
+                "name": "Ricardo Garcia",
+                "sex": "Male",
+                "age": 27,
+                "height": 175,
+                "weight": 126.0
+            },
+            "bodyComposition": {
+                "totalBodyWater": 51.3,
+                "proteins": 13.9,
+                "minerals": 4.75,
+                "dryLeanMass": 18.65,
+                "leanBodyMass": 69.94999999999999,
+                "bodyFatMass": 56.0,
+                "totalWeight": 125.94999999999999
+            }
+        }
+    ],
+    "id": "290224-1-2024-05-03"
+}

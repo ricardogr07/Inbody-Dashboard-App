@@ -40,7 +40,3 @@ resource "azurerm_cosmosdb_sql_container" "sql_container" {
 
 }
 
-data "azurerm_cosmosdb_account" "cosmos_db" {
-  name                = var.name
-  resource_group_name = var.resource_group_name
-}

@@ -1,4 +1,4 @@
-resource "azurerm_storage_account" "storage_account" {
+resource "azurerm_storage_account" "pdf_storage" {
   name                     = var.storage_account_name
   resource_group_name      = var.resource_group_name
   location                 = var.location
@@ -7,8 +7,8 @@ resource "azurerm_storage_account" "storage_account" {
   account_kind             = "StorageV2"
 }
 
-resource "azurerm_storage_container" "container" {
+resource "azurerm_storage_container" "pdf_container" {
   name                  = var.container_name
-  storage_account_name  = azurerm_storage_account.storage_account.name
+  storage_account_name  = azurerm_storage_account.pdf_storage.name
   container_access_type = "private"
 }

@@ -10,10 +10,13 @@ resource "azurerm_app_service_plan" "function_plan" {
   name                = "${var.function_app_name}-plan"
   location            = var.location
   resource_group_name = var.resource_group_name
+  kind     = "Linux"
+  reserved = true
+
 
   sku {
-    tier = "Dynamic"
-    size = "Y1"  // Consumption plan
+    tier = "Standard"
+    size = "S1"
   }
 }
 
@@ -25,19 +28,19 @@ resource "azurerm_function_app" "function_app" {
   storage_account_name= azurerm_storage_account.function_sa.name
   storage_account_access_key = azurerm_storage_account.function_sa.primary_access_key
 
+  os_type = "linux"
+  
+
   identity {
     type = "SystemAssigned"
   }
 
   app_settings = {
-    "AzureWebJobsStorage" = "DefaultEndpointsProtocol=https;AccountName=${azurerm_storage_account.function_sa.name};AccountKey=${azurerm_storage_account.function_sa.primary_access_key}"
+    "FUNCTIONS_WORKER_RUNTIME" = "python"
     "FUNCTIONS_EXTENSION_VERSION" = "~3"
-    "FUNCTIONS_WORKER_RUNTIME" = "dotnet"  // Change this depending on your function runtime; could be node, java, python, etc.
   }
 
   site_config {
-    cors {
-      allowed_origins = ["*"]
-    }
+    linux_fx_version = "PYTHON|3.8"
   }
 }

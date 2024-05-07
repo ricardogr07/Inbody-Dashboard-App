@@ -1,0 +1,13 @@
+{
+    "scriptFile": "__init__.py",
+    "bindings": [
+      {
+        "name": "pdfs",
+        "type": "blobTrigger",
+        "direction": "in",
+        "path": "inbodyapppdfstore/pdfs/{name}",
+        "connection": "inbodyapppdfstore_STORAGE"
+      }
+    ]
+  }
+  

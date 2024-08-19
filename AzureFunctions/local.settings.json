@@ -4,6 +4,6 @@
     "AzureWebJobsStorage": "",
     "FUNCTIONS_WORKER_RUNTIME": "python",
     "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
-    "inbodyapppdfstore_STORAGE": "DefaultEndpointsProtocol=https;AccountName=inbodyapppdfstore;AccountKey=Mj0pJX1+9H/ib0weKGHmWXxz3uLGCd5Y6zj7yYtFwVpPCsbZvrdeOkorfVBJdBRn1gjVif9OOwv/+AStTu+ehw==;EndpointSuffix=core.windows.net"
+    "inbodyapppdfstore_STORAGE": "DefaultEndpointsProtocol=https;AccountName=inbodyapppdfstore;AccountKey=xx/+AStTu+ehw==;EndpointSuffix=core.windows.net"
   }
 }
